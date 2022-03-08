@@ -1,0 +1,16 @@
+public class SalesCommission {
+
+	public static void main(String[] args) {
+	
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Enter the car's selling price: ");
+		double price = scanner.nextDouble();
+		double commission = price * 0.014;
+		DecimalFormat f = new DecimalFormat("0.00");
+		if(commission<=300) {
+			System.out.print("The sales commission is 300,00 euros.");
+		}else {
+			System.out.print("The sales commission is "+f.format(commission)+" euros.");
+		}
+	}
+}
