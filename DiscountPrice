@@ -1,0 +1,19 @@
+public class DiscountPrice {
+	public double calculatePercentage(double percentage) {
+		return 1-(percentage / 100);
+	}
+	
+	public static void main(String[] args) {
+		DiscountPrice pc = new DiscountPrice();
+		Scanner in = new Scanner(System.in);
+		System.out.print("Enter original price: ");
+		double price = in.nextDouble();
+		System.out.print("Enter discount percentage: ");
+		double percentage = in.nextDouble();
+		double result = price* pc.calculatePercentage(percentage);
+		DecimalFormat f = new DecimalFormat("0.00");
+		System.out.print("The discount price is "+f.format(result));
+
+	}
+
+}
